@@ -14,6 +14,8 @@ import { environment } from '../environments/environment';
 import { ItemService } from './shared/item.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { MatButtonModule } from '@angular/material/button';
     AngularFireDatabaseModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [ItemService],
   bootstrap: [AppComponent],
