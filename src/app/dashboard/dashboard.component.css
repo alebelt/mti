@@ -122,11 +122,11 @@
 }
 
 .tdManager{
-  width: 220px;
+  width: 200px;
   text-align: left;
 }
 .tdOptions{
-  width: 70px;
+  width: 100px;
   text-align: left;
 }
 
@@ -203,4 +203,82 @@
 
 .btnOpenDEtail{
   font-size: smaller;
+}
+
+
+.TERM_APPROVED{
+  background:#157cf1
+}
+.termination_approved::before, .counterparty_approved::before{
+  margin-left: -15px;
+  margin-top: 8px; 
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #157cf1;
+
+}
+
+
+.TERM_PENDING_APPROVAL{
+  background: #fa9521;
+}
+.termination_pending_approval::before{
+  margin-left: -15px;
+  margin-top: 8px; 
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #fa9521;
+}
+
+
+.NMA_DRAFT{
+  background:#464646;
+  color: #dbdbdb;
+}
+.nma_draft::before{
+  margin-left: -15px;
+  margin-top: 8px; 
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #464646;
+
+}
+
+
+
+.NMA_ACTIVE{
+  background:#1ebf1e;
+  color: #dbdbdb;
+}
+.nma_iv_active::before{
+  margin-left: -15px;
+  margin-top: 8px; 
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #1ebf1e;
+
 }
