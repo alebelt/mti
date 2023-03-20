@@ -48,31 +48,27 @@
                                 </ng-template>
                                
                                 <mat-nav-list>
-
                                     <mat-list-item class="itemLine" *ngFor="let item of items.Data">
                                         <ng-container >
-                                            <span matLine [ngClass]="{'itemApproved': item.StatusDescriptionUI == 'APPROVED', 'itemActive' : item.StatusDescriptionUI == 'ACTIVE', 'itemDrafted' : item.StatusDescriptionUI == 'DRAFT', 'itemPending' : item.StatusDescriptionUI == 'TERM PENDING' }">
+                                            <span matLine class="tdManager"
+                                                [ngClass]="{'itemApproved': item.StatusDescriptionUI == 'APPROVED', 'itemActive' : item.StatusDescriptionUI == 'ACTIVE', 'itemDrafted' : item.StatusDescriptionUI == 'DRAFT', 'itemPending' : item.StatusDescriptionUI == 'TERM PENDING' }">
                                                 <h4 matLine>{{item.ManagerAccountName}}</h4>
                                                 <p matLine class="subline">{{item.StatusDescriptionUI}}</p>
                                             </span>
-                                            <div>
+                                            <div class="tdInfo">
                                                 <span matLine class="itemMap">
                                                     <h4 matLine class="map">{{item.MAPNumber}}</h4>
                                                     <p matLine class="subline">{{item.BusinessLineName}}</p>
                                                 </span>
                                             </div>
-                                            <div>
+                                            <div class="tdOptions">
                                                 <span matLine class="text-right itemAnalyst">
                                                     <h4 matLine class="map">{{item.ImplementationContact}}</h4>
                                                     <i matLine class="subline">{{item.CommentList.length}} comments</i>
                                                 </span>
                                             </div>                                            
                                         </ng-container>
-
-                                    </mat-list-item>
-
-
-                          
+                                    </mat-list-item>                          
                                 </mat-nav-list>
                             </mat-tab>
 

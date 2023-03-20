@@ -1,49 +1,161 @@
 <mat-sidenav-container class="example-container" autosize>
-  <mat-sidenav #sidenav position="start" class="example-sidenav" mode="push" opened="false">
+  <mat-sidenav #sidenav position="start" class="example-sidenav detailSidenav" mode="push" opened="false" style="width: 90%;">
 
-    <mat-nav-list>
-      <mat-list-item>
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
-          <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
-        </button>
-      </mat-list-item>
-      <mat-list-item>
-       <div class="itemDetailSide">
+    <button mat-icon-button class="btnCloseDet" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
+      <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
+    </button>
 
-        <h2 matheader style="padding-left: 15px;margin: 0;">  GMV Risk Allocation </h2>  
-        <h4 style="padding-left: 15px;margin: 0;" matSubheader>Amendment Number: 1</h4>  
-              
-        <mat-list-item>
-          <div class="itemDetailSide" style="padding-left: 15px; margin-top: 50px;">
+        <h4 style="padding-left: 15px;" matSubheader> Investment Analyst</h4>  
+        <h2 matheader style="padding-left: 15px;margin: 0;">  Chris DeConinck  </h2>  
+    
+
+      <div style="padding-left: 15px;margin-bottom: 15px;">
+        <h4 matheader>Manager Status </h4>  
+        <button mat-flat-button color="warn"> TERM PENDING </button>
+      </div>
+
+      <mat-divider></mat-divider>
    
-           <h2 matheader> Nebula Research and Develpment LLC </h2>  
-             <button mat-flat-button color="primary">Status Approved</button>
-          
-             <mat-divider></mat-divider>
+    <mat-nav-list class="itemDetailSideWrapper">
+  
+   
+   
+
+        
+
+        <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+         
+       
          
            <div matLine class="itemMap">
-             <h4 matLine class="map">MAP: MLHNR1_100</h4>
-             <p matLine class="subline">Bussines Line: Northrock</p>
+             <h4 matLine class="map">NRA</h4>
+             <p matLine class="subline">$0</p>
              </div>
  
-             <mat-divider></mat-divider>
      
                          <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map">Analyst: STEVEN ZHENG</h4>
-                                             <p matLine class="subline">(2)</p>
-                                         </div>
- 
-                                         <mat-divider></mat-divider>
- 
- 
-         
-   
+                                             <h4 matLine class="map"> Decrease NRA</h4>
+                                             <p matLine class="subline"> $ on days</p>
+                                         </div>   
           </div>
          </mat-list-item>
 
-       </div>
-      </mat-list-item>
+        <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">Manager Contact</h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> Manage</h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+
+
+
+        <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map"> Termination Letter</h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> Fully Executed</h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+        <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">  Termination Request Date </h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> 1/31/2023 </h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+        <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">  Termination Effective Date </h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> 1/31/2023 </h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+
+         <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">  Reason For Termination </h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> Finish </h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+         <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">   Penalties For Termination   </h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> - </h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+         <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">  Plan For Liquidation Account    </h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> - </h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+         <mat-list-item>
+          <div class="itemDetailSide" style="">
+   
+           <div matLine class="itemMap">
+             <h4 matLine class="map">  Comments    </h4>
+             </div>
+ 
+     
+                         <div matLine class="text-left itemAnalyst">
+                                             <h4 matLine class="map"> - </h4>
+                                         </div>   
+          </div>
+         </mat-list-item>
+
+
+
+
+     
     </mat-nav-list>
   </mat-sidenav>
 
@@ -62,10 +174,12 @@
                       <h3 matSubheader>Request Type: {{group?.key}}</h3>
                     
               <ng-container *ngIf="group?.value">
+
+
                           <mat-accordion *ngFor="let item of group.value; let i = index" class="example-headers-align" multi>
                             <mat-expansion-panel *ngIf="i < 5">
                               <mat-expansion-panel-header [collapsedHeight]="'70px'">
-                                  <mat-panel-title style="display: grid;">
+                                  <!-- <mat-panel-title style="display: grid;">
                                     <span class="Text">{{item.RequestStatusDesc}}</span>
                                     <span class="link" style="opacity:0.7">{{item.CreateDatetime | date:'short'}}</span>
                                   </mat-panel-title>
@@ -74,118 +188,181 @@
                                       {{item.InvestmentVehicleName}}
                                     </span>
                                     <span class="link" style="opacity:0.7"> {{item.MAPNumber}}</span>
-                                  </mat-panel-description>
+                                  </mat-panel-description> -->
+
+                                  <mat-nav-list>
+                                  <mat-list-item class="itemLine">
+                              
+                                    <div class="listGrid">
+                                        <span matLine class="tdManager"
+                                                [ngClass]="'itemApproved'">
+                                                <h4 matLine>{{item.InvestmentVehicleName}}</h4>
+                                                <p matLine class="subline">{{item.RequestStatusDesc}} </p>
+                                            </span>
+                                            <div class="tdOptions">
+                                                <span matLine class="itemMap">
+                                                    <h4 matLine class="map">{{item.MAPNumber}}</h4>
+                                                    <p matLine class="subline">{{item.CreateDatetime | date:'short'}}</p>
+                                                </span>
+                                            </div>                                     
+                                    </div>
+      
+
+                                </mat-list-item>
+                              </mat-nav-list>
+                                
                               </mat-expansion-panel-header>
                     
-                              <div class="panelContent">
+                              <div class="panelContent PanelDetailList">
                     
+
+                                <h4 matSubheader style="display: flex; justify-content: space-between;">
+                                  <span>Termination Pending Approval</span>  <button mat-icon-button (click)="sidenav.toggle()" class="btnOpenDEtail" color="primary"> <mat-icon>list</mat-icon></button>
+                                </h4>  
+                                <b class="subSection">Product Head Pending approval by anyone below</b>
+
+                               
+
+
+
+                                <mat-nav-list>
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Veronica Bogado</h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                
+                                      </ng-container>
+                                  </mat-list-item>                          
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Vanesa Alvarez</h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                          
+                                      </ng-container>
+                                  </mat-list-item>                          
+                              </mat-nav-list>
+
+                            
+                    
+                                <br>
+
+                     
+                                <b class="subSection">Investment Executive Pending approval by:</b>
+                                <mat-nav-list>
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Veronica Bogado</h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                
+                                      </ng-container>
+                                  </mat-list-item>                          
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Dolores Tagle</h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                          
+                                      </ng-container>
+                                  </mat-list-item>                          
+                                </mat-nav-list>
                         
-                                <mat-list>
-                    
-                                  <h4 (click)="sidenav.toggle()" matSubheader>Counterparty submited to Workflow</h4>  
-                                
-                                  <mat-list-item>
-                                    <span matLine >
-                                      <h4 matLine>Product Head Investment MD Pending Approval by</h4>
-                                      <p matLine class="subline">Enzo LHP Tribbia</p>
-                                    </span>
-                                    <div class="btnGroupActions">
-                                      <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
-                                        <mat-icon>block</mat-icon>
-                                      </button>   
-                                        <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
-                                          <mat-icon>check</mat-icon>
-                                        </button>
-                                                      
-                                    </div>
-                                  </mat-list-item>
-                                  <mat-list-item>
-                                    <span matLine >
-                                      <h4 matLine>Product Head Investment MD Pending Approval by</h4>
-                                      <p matLine class="subline">Enzo LHP Tribbia</p>
-                                    </span>
-                                    <div class="btnGroupActions">
-                                      <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
-                                        <mat-icon>block</mat-icon>
-                                      </button>   
-                                        <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
-                                          <mat-icon>check</mat-icon>
-                                        </button>
-                                                      
-                                    </div>
-                                  </mat-list-item>
-                                  <mat-list-item>
-                                    <span matLine >
-                                      <h4 matLine>Product Head Investment MD Pending Approval by</h4>
-                                      <p matLine class="subline">Enzo LHP Tribbia</p>
-                                    </span>
-                                    <div class="btnGroupActions">
-                                      <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
-                                        <mat-icon>block</mat-icon>
-                                      </button>   
-                                        <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
-                                          <mat-icon>check</mat-icon>
-                                        </button>
-                                                      
-                                    </div>
-                                  </mat-list-item>
-                                  <mat-list-item>
-                                    <span matLine >
-                                      <h4 matLine>Product Head Investment MD Pending Approval by</h4>
-                                      <p matLine class="subline">Enzo LHP Tribbia</p>
-                                    </span>
-                                    <div class="btnGroupActions">
-                                      <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
-                                        <mat-icon>block</mat-icon>
-                                      </button>   
-                                        <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
-                                          <mat-icon>check</mat-icon>
-                                        </button>
-                                                      
-                                    </div>
-                                  </mat-list-item>
-                                  <mat-list-item>
-                                    <span matLine >
-                                      <h4 matLine>Product Head Investment MD Pending Approval by</h4>
-                                      <p matLine class="subline">Enzo LHP Tribbia</p>
-                                    </span>
-                                    <div class="btnGroupActions">
-                                      <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
-                                        <mat-icon>block</mat-icon>
-                                      </button>   
-                                        <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
-                                          <mat-icon>check</mat-icon>
-                                        </button>
-                                                      
-                                    </div>
-                                  </mat-list-item>
-                                  <mat-list-item>
-                                    <span matLine >
-                                      <h4 matLine>Product Head Investment MD Pending Approval by</h4>
-                                      <p matLine class="subline">Enzo LHP Tribbia</p>
-                                    </span>
-                                    <div class="btnGroupActions">
-                                      <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
-                                        <mat-icon>block</mat-icon>
-                                      </button>   
-                                        <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
-                                          <mat-icon>check</mat-icon>
-                                        </button>
-                                                      
-                                    </div>
-                                  </mat-list-item>
-                              
-                                </mat-list>
                     
                                 <br>
+
+                                <b class="subSection">Ops Co-Heads Pending approval by:</b>
+                                <mat-nav-list>
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Veronica Bogado</h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                
+                                      </ng-container>
+                                  </mat-list-item>                          
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Dolores Tagle</h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                          
+                                      </ng-container>
+                                  </mat-list-item>                          
+                                  <mat-list-item class="itemLine">
+                                      <ng-container >
+                                          <span matLine class="tdManager">
+                                              <h4 matLine>Alejandro Beltran </h4>
+                                          </span>
+                                          <div class="btnGroupActions">
+                                            <button mat-icon-button color="gray" (click)="openDialog()" class="btnAction btnReject" aria-label="Example icon button with a menu icon">
+                                              <mat-icon>block</mat-icon>
+                                            </button>   
+                                              <button mat-icon-button color="green" class="btnAction btnAccept" aria-label="Example icon button with a menu icon">
+                                                <mat-icon>check</mat-icon> 
+                                              </button>
+                                          </div>                                          
+                                      </ng-container>
+                                  </mat-list-item>                          
+                                </mat-nav-list>
+
+
                     
-                                <div style="margin: 0 30px 0 10px;">
-                                  <button mat-stroked-button color="primary"> <mat-icon>email</mat-icon> Resend Notification</button> <br>
-                                  <br>
-                                  <small>Last email notifications on 1/18/2023 4:44 PM</small>
+                                <br>
+
+
+
+
+
+                    
+                                <div style="display: flex;">
+                                  <button mat-stroked-button color="secondary"> Cancel Termination</button>
+                                  <button mat-stroked-button color="primary"> <mat-icon>email</mat-icon> Resend Notification</button>
                                 </div>
-                              
-                                <br>
+                                <small style="padding:10px 20px 20px 10px ">Last email notifications on 1/18/2023 4:44 PM</small>
                               </div>
                             </mat-expansion-panel>  
                     

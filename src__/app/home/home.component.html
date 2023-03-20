@@ -1,0 +1,212 @@
+
+
+ <div class="grid-container">
+              
+                <div fxLayout="row" fxLayoutAlign="space-around center">
+            
+                    <div class="container-title p-4">
+                        <h2 class="mat-h2 m-2" color="Primary">
+                            <mat-icon>dashboard</mat-icon> Dashboard
+                        </h2>
+                        <button style="margin-top: -10px;" (click)="showFilters = !showFilters" mat-button color="primary"> <mat-icon>search</mat-icon></button>
+                      </div>  
+                      
+                       
+
+
+
+                        <div class="example-container" style="display: block;gap: 0px;">                          
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                              <mat-label>Filter by Bussines Line</mat-label>
+                              <mat-select [(ngModel)]="bl">
+                                <mat-option value="option1">All Bussines Line</mat-option>
+                                <mat-option value="option2">Lighthouse Solutions</mat-option>
+                                <mat-option value="option3">NorthRock</mat-option>
+                                <mat-option value="option4">Luminae</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" style="width: 100%;" *ngIf="showFilters">
+                              <mat-label>Filter by Client/Product</mat-label>
+                              <mat-select>
+                                <mat-option value="option1">All Client/Product</mat-option>
+                                <mat-option value="option2">Lighthouse</mat-option>
+                                <mat-option value="option3">OTTP</mat-option>
+                                <mat-option value="option4">MIT</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+
+
+
+                    
+                        <mat-tab-group mat-align-tabs="center" (selectedTabChange)="tabChanged($event)"
+                            color="white" backgroundColor="primary" headerPosition="below" [selectedIndex]="0">
+                            <mat-tab aria-selected="true">
+                                <ng-template mat-tab-label>
+                                    <mat-icon class="material-icons color_red" matBadge="15" matBadgeColor="warn"></mat-icon>
+                                    All
+                                </ng-template>
+                               
+                                <mat-nav-list>
+
+                                    <mat-list-item class="itemLine" *ngFor="let item of items.Data">
+                                        <ng-container >
+                                            <span matLine [ngClass]="{'itemApproved': item.StatusDescriptionUI == 'APPROVED', 'itemActive' : item.StatusDescriptionUI == 'ACTIVE', 'itemDrafted' : item.StatusDescriptionUI == 'DRAFT', 'itemPending' : item.StatusDescriptionUI == 'TERM PENDING' }">
+                                                <h4 matLine>{{item.ManagerAccountName}}</h4>
+                                                <p matLine class="subline">{{item.StatusDescriptionUI}}</p>
+                                            </span>
+                                            <div>
+                                                <span matLine class="itemMap">
+                                                    <h4 matLine class="map">{{item.MAPNumber}}</h4>
+                                                    <p matLine class="subline">{{item.BusinessLineName}}</p>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span matLine class="text-right itemAnalyst">
+                                                    <h4 matLine class="map">{{item.ImplementationContact}}</h4>
+                                                    <i matLine class="subline">{{item.CommentList.length}} comments</i>
+                                                </span>
+                                            </div>                                            
+                                        </ng-container>
+
+                                    </mat-list-item>
+
+
+                          
+                                </mat-nav-list>
+                            </mat-tab>
+
+
+
+
+                            <mat-tab label="Pipeline">
+                                <ng-template mat-tab-label>
+                                    <mat-icon class="material-icons color_red" matBadge="3" matBadgeColor="warn"></mat-icon>
+                                    Pipeline
+                                </ng-template>
+                               
+                                <mat-nav-list>
+
+                                 
+                                    <mat-list-item class="itemLine" >
+                                        <span matLine class="itemDrafted">
+                                            <h4 matLine>Nebula Research and Dev...</h4>
+                                            <p matLine class="subline">Drafted</p>
+                                        </span>
+                                        <div>
+                                            <span matLine class="itemMap">
+                                                <h4 matLine class="map">MLHNR1_100</h4>
+                                                <p matLine class="subline">Northrock</p>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span matLine class="text-right itemAnalyst">
+                                                <h4 matLine class="map">STEVEN ZHENG</h4>
+                                                <i matLine class="subline">2 comments</i>
+                                            </span>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="itemLine" >
+                                        <span matLine class="itemDrafted">
+                                            <h4 matLine>Nebula Research and Dev...</h4>
+                                            <p matLine class="subline">Drafted</p>
+                                        </span>
+                                        <div>
+                                            <span matLine class="itemMap">
+                                                <h4 matLine class="map">MLHNR1_100</h4>
+                                                <p matLine class="subline">Northrock</p>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span matLine class="text-right itemAnalyst">
+                                                <h4 matLine class="map">STEVEN ZHENG</h4>
+                                                <i matLine class="subline">2 comments</i>
+                                            </span>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="itemLine" >
+                                        <span matLine class="itemActive">
+                                            <h4 matLine>Nebula Research and Dev...</h4>
+                                            <p matLine class="subline">Active</p>
+                                        </span>
+                                        <div>
+                                            <span matLine class="itemMap">
+                                                <h4 matLine class="map">MLHNR1_100</h4>
+                                                <p matLine class="subline">Northrock</p>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span matLine class="text-right itemAnalyst">
+                                                <h4 matLine class="map">STEVEN ZHENG</h4>
+                                                <i matLine class="subline">2 comments</i>
+                                            </span>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="itemLine" >
+                                        <span matLine class="itemActive">
+                                            <h4 matLine>Nebula Research and Dev...</h4>
+                                            <p matLine class="subline">Active</p>
+                                        </span>
+                                        <div>
+                                            <span matLine class="itemMap">
+                                                <h4 matLine class="map">MLHNR1_100</h4>
+                                                <p matLine class="subline">Northrock</p>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span matLine class="text-right itemAnalyst">
+                                                <h4 matLine class="map">STEVEN ZHENG</h4>
+                                                <i matLine class="subline">2 comments</i>
+                                            </span>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="itemLine" >
+                                        <span matLine class="itemPending">
+                                            <h4 matLine>Nebula Research and Dev...</h4>
+                                            <p matLine class="subline">Team Pending</p>
+                                        </span>
+                                        <div>
+                                            <span matLine class="itemMap">
+                                                <h4 matLine class="map">MLHNR1_100</h4>
+                                                <p matLine class="subline">Northrock</p>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span matLine class="text-right itemAnalyst">
+                                                <h4 matLine class="map">STEVEN ZHENG</h4>
+                                                <i matLine class="subline">2 comments</i>
+                                            </span>
+                                        </div>
+                                    </mat-list-item>
+                     
+                                  
+                   
+                                 
+                          
+                                </mat-nav-list>
+
+                            </mat-tab>
+
+
+
+                            <mat-tab label="Draft Mode Accounts">Draft Mode Accounts</mat-tab>
+                            <mat-tab label="Pending Approvals">Pending Approvals</mat-tab>
+                            <mat-tab label="Fully Approved">Fully Approved</mat-tab>
+                            <mat-tab label="Active Accounts">Active Accounts</mat-tab>
+                            <mat-tab label="Termination Pendings">Termination Pendings</mat-tab>
+                            <mat-tab label="Terminated">Terminated</mat-tab>
+                          </mat-tab-group>
+            
+
+
+
+
+
+            
+                    
+            
+         
+                </div>        
+    </div>
+
+

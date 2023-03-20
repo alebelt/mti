@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  margin: 10px 40px;
+  padding: 10px;
+}
+.container-title {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.container-title h1{
+  display: contents;
+}
+
+.mat-expansion-panel-header-title span{
+  display: grid !important;
+  white-space: nowrap;
+}
+.mat-expansion-panel-header-title .link{
+  font-size: xx-small;
+}
+
+
+.mat-expansion-panel-header-description span{
+  display: grid !important;
+  white-space: nowrap;
+}
+.mat-expansion-panel-header-description .link{
+  font-size: xx-small;
+}
+
+.panelContent{
+  font-size: small;
+  background: #f1f1f1;
+  border-top: 1px solid grey;
+}
+
+.subline{
+  opacity: .5;
+}
+
+.container-title{
+  margin: 15px 5px 5px 5px;
+  padding: 5px;
+  justify-content: space-between;
+}
+.titleExpanded{
+  margin: 15px 5px 5px 5px;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.mat-subheader{
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.mat-list-base .mat-list-item .mat-line {
+  margin-bottom: 0;
+}
+
+.mat-list-base .mat-list-item.mat-3-line, .mat-list-base .mat-list-option.mat-3-line {
+  height: 60px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+}
+
+.itemDetailSide{
+  max-width: 300px;
+}
+.mat-button-toggle-group {
+  height: 30px;
+  align-items: center;
+}
+
+
+.btnGroupActions{
+  display: flex;
+  margin-top: -15px;
+  align-self: center;
+  margin-right: -10px;
+}
+.btnGroupActions .mat-icon-button {
+  padding: 0;
+  min-width: 0;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  line-height: 30px;
+  border-radius: 50%;
+}
+.btnGroupActions .mat-icon-button .mat-icon{
+  width: 18px;
+  height: 18px;
+  display: initial;
+}
+
+
+.btnAction{
+  width: 24px;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: top;
+  font-size: 10px;
+  padding: 0 0;
+  margin: 2px;
+  border: 1px solid #c9c9c9;
+}
+.btnAction .mat-icon{
+  width: 16px;
+  height: 16px;
+  font-size: 18px;
+}
+
+.btnAccept{
+  color: rgb(22, 151, 22);
+}
+.btnReject{
+  color: rgb(94, 94, 94);
+}

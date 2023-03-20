@@ -202,3 +202,18 @@
   margin: 0 !important;
   padding-bottom: 8px;
 }
+
+.tdManager{
+  width: 50%;
+  flex: none;
+}
+.tdInfo{
+  width: 25%;
+  flex: none;
+  text-align: left;
+}
+.tdOptions{
+  width: 25%;
+  flex: none;
+  text-align: right;
+}
