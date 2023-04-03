@@ -178,9 +178,13 @@
 }
 
 :host /deep/ .detailSidenav .mat-list-base .mat-list-item-content {
+  display: flex;
+  margin:0px;
+}
+/* :host /deep/ .detailSidenav .mat-list-base .mat-list-item-content {
   display: block;
   margin: 5px 20px;
-}
+} */
 :host /deep/ .detailSidenav .btnCloseDet {
   position: absolute;
   right: 15px;
@@ -193,9 +197,15 @@
 .itemDetailSide{
   max-height: 50px;
   display: flex;
-  border-bottom: 1px solid #dbdbdb;
+  width: 100%;
   justify-content: space-between;
 }
+/* .itemDetailSide{
+  max-height: 50px;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  justify-content: space-between;
+} */
 
 .itemAnalyst{
   text-align: right;
@@ -281,4 +291,15 @@
   border-radius: 7.5px;
   background-color: #1ebf1e;
 
+}
+
+.main_information{
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  margin: -15px 10px 5px 10px;
+
+}
+.full_information{
+  border-radius: 10px;
+  margin: 0px 10px;
 }

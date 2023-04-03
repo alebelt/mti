@@ -1,0 +1,75 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>MOB</span>
+  <span class="example-spacer"></span>
+  <button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon favorite-icon ml-auto text-yellow">
+    <mat-icon>apps</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>HOME</button>
+    <button mat-menu-item>LENZ</button>
+    <button mat-menu-item>PRISM</button>
+  </mat-menu>
+
+  <button [matMenuTriggerFor]="menuUser" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu #menuUser="matMenu" >
+    <button mat-menu-item routerLink="/login" routerLinkActive="active-link">LOGIN</button>
+    <button mat-menu-item routerLink="/login" routerLinkActive="active-link">LOGOUT</button>
+  </mat-menu>
+
+</mat-toolbar>
+
+ <mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="'navigation'"
+      [mode]="'over'"
+      [opened]="false"
+      color="primary"
+      >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list class="mat-nav-list-menu">
+      <a (click)="drawer.toggle()" mat-list-item routerLink="/home" routerLinkActive="active-link" selected class="mat-list-item mat-focus-indicator active"><mat-icon>home</mat-icon> DASHBOARD</a>
+      <a (click)="drawer.toggle()" mat-list-item href="#" class="text-muted"><mat-icon>apps</mat-icon> COUNTERPARTIES</a>
+      <a (click)="drawer.toggle()" mat-list-item href="#" class="text-muted"><mat-icon>apps</mat-icon> NEW ACCOUNT REQUEST</a>
+      <a (click)="drawer.toggle()" mat-list-item  routerLink="/dashboard" routerLinkActive="active-link" class="text-muted"><mat-icon>apps</mat-icon> REQUESTS</a>
+      <a (click)="drawer.toggle()" mat-list-item href="#" class="text-muted"><mat-icon>apps</mat-icon> CLIENT OVERVIEW</a>
+      <a (click)="drawer.toggle()" mat-list-item href="#" class="text-muted"><mat-icon>apps</mat-icon> REPORT BUILDER</a>
+      <a (click)="drawer.toggle()" mat-list-item href="#" class="text-muted"><mat-icon>apps</mat-icon> MEMBERSHIP</a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+
+
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<footer *ngIf="this.currentUrl == '/dashboard'">
+  <mat-toolbar class="toolbarNav">
+    <button mat-flat-button routerLink="/top-artists" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue" matBadge="15" matBadgeColor="primary">list</mat-icon>
+      <span>My Approvals</span> 
+    </button>
+    <button mat-flat-button routerLink="/top-tracks" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue" matBadge="30" matBadgeColor="primary">list</mat-icon>
+      <span>All Pending Approvals</span>
+    </button>
+    <button mat-flat-button routerLink="/history" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue" matBadge="120" matBadgeColor="warn">list</mat-icon>
+      <span>Request History</span>
+    </button>
+  </mat-toolbar>
+</footer>

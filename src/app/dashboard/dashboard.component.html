@@ -6,156 +6,142 @@
       <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
     </button>
 
-        <h4 style="padding-left: 15px;" matSubheader> Investment Analyst</h4>  
-        <h2 matheader style="padding-left: 15px;margin: 0;"> {{itemSelected?.InvestmentVehicleName}}  </h2>  
-    
+     
+        <div  style="padding-left: 15px;padding-bottom: 10px;">
+          <h4 style="margin-bottom: 15px;padding: 0;margin-top: 25px;" matSubheader>Request {{itemSelected?.RequestTypeDesc}} </h4> 
+          <h2 matheader style="margin:0"> {{itemSelected?.InvestmentVehicleName}}  </h2>  
+          <p matLine class="subline pl-3">Investment Analyst</p>     
+          <button mat-flat-button style="color: aliceblue;" [ngClass]="itemSelected?.RequestStatusCode"> {{itemSelected?.RequestStatusDesc}} </button>     
+        </div>
 
-      <div style="padding-left: 15px;margin-bottom: 15px;">
-        <h4 matheader>Manager Status </h4>  
-        <button mat-flat-button [ngClass]="itemSelected?.RequestStatusCode"> {{itemSelected?.RequestStatusDesc}} </button>
-      </div>
 
-      <mat-divider></mat-divider>
-   
-    <mat-nav-list class="itemDetailSideWrapper">
-  
-   
-   
 
+        <mat-list class="main_information">
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.BLName}}</h4>
+                <p matLine class="subline">Business Line</p>
+              </div>
+              <div matLine class="itemAnalyst">
+                <h4 matLine class="map">{{itemSelected?.BusinessLineCode}}</h4>
+                <p matLine class="subline">Business Line Code</p>
+              </div>    
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.RequestDate | date:'short'}}</h4>    
+                <p matLine class="subline">Request Date</p>
+              </div>
+              <div matLine class="itemAnalyst">
+                <h4 matLine class="map">{{itemSelected?.EffectiveDate | date:'short'}}</h4>
+                <p matLine class="subline">Effective Date</p>
+              </div>    
+            </div>
+          </mat-list-item>
+        </mat-list>
+
+        <mat-list class="full_information">
+
+
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.BLName}}</h4>
+                <p matLine class="subline">Business Line</p>
+              </div>
+              <div matLine class="itemAnalyst">
+                <h4 matLine class="map">{{itemSelected?.BusinessLineCode}}</h4>
+                <p matLine class="subline">Business Line Code</p>
+              </div>    
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.MAPNumber}}</h4>    
+                <p matLine class="subline">MAP number</p>
+              </div>
+              <div matLine class="itemAnalyst">
+                <h4 matLine class="map">{{itemSelected?.LastEmailNotification | date}}</h4>
+                <p matLine class="subline">Last Email Notification</p>
+              </div>    
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.AdditionalInfo}}</h4>    
+                <p matLine class="subline">Additional Information</p>
+              </div> 
+            </div>
+          </mat-list-item>
+        </mat-list>
+
+        <mat-divider></mat-divider>
+
+        <mat-list class="full_information">
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.BLName}}</h4>
+                <p matLine class="subline">Business Line</p>
+              </div>
+              <div matLine class="itemAnalyst">
+                <h4 matLine class="map">{{itemSelected?.BusinessLineCode}}</h4>
+                <p matLine class="subline">Business Line Code</p>
+              </div>    
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="itemDetailSide">
+              <div matLine class="itemMap">
+                <h4 matLine class="map">{{itemSelected?.MAPNumber}}</h4>    
+                <p matLine class="subline">MAP number</p>
+              </div>
+              <div matLine class="itemAnalyst">
+                <h4 matLine class="map">{{itemSelected?.LastEmailNotification | date}}</h4>
+                <p matLine class="subline">Last Email Notification</p>
+              </div>    
+            </div>
+          </mat-list-item>
+        </mat-list>
+
+        <h4  matsubheader class="mat-subheader" style="margin-left: 15px; padding: 0; margin-top: 15px;">Role Status List </h4>
+       
+       
+        <div class="full_information rolesStatusList">
+          <div *ngFor="let role of itemSelected?.SerializableRoleStatusList">
+            <div class="itemDetailSide_Users">
+              <div style="padding: 10px;"> 
         
+                <ng-container *ngIf="role?.SerializableRoleUserList">  
+                  <b>{{role.RequestRoleName}}</b> 
+              
+                  <mat-list >
+                    <mat-list-item *ngFor="let user of role?.SerializableRoleUserList">
+                  
+                        <div matLine class="itemMap">
+                          <h4 matLine class="map">{{user.FirstName}} {{user.LastName}}</h4>
+                          <p matLine class="subline">{{user.UserName}}</p>
+                        </div>   
+                    
+                    </mat-list-item>
+                  </mat-list>              
+                </ng-container>
+              </div> 
+           
+            
 
-        <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-         
-         
-           <div matLine class="itemMap">
-             <h4 matLine class="map">NRA</h4>
-             <p matLine class="subline">$0</p>
-             </div>
+
+            </div>
+          </div>     
+        </div>
  
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> Decrease NRA</h4>
-                                             <p matLine class="subline"> $ on days</p>
-                                         </div>   
-          </div>
-         </mat-list-item>
+  
 
-        <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">Manager Contact</h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> Manage</h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-
-
-
-        <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map"> Termination Letter</h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> Fully Executed</h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-        <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">  Termination Request Date </h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> 1/31/2023 </h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-        <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">  Termination Effective Date </h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> 1/31/2023 </h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-
-         <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">  Reason For Termination </h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> Finish </h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-         <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">   Penalties For Termination   </h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> - </h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-         <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">  Plan For Liquidation Account    </h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> - </h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-         <mat-list-item>
-          <div class="itemDetailSide" style="">
-   
-           <div matLine class="itemMap">
-             <h4 matLine class="map">  Comments    </h4>
-             </div>
- 
-     
-                         <div matLine class="text-left itemAnalyst">
-                                             <h4 matLine class="map"> - </h4>
-                                         </div>   
-          </div>
-         </mat-list-item>
-
-
-
-
-     
-    </mat-nav-list>
   </mat-sidenav>
 
   <div class="example-sidenav-content">
